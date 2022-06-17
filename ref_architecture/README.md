@@ -3,7 +3,7 @@
 https://docs.microsoft.com/ja-jp/azure/architecture/browse/
 の中から参考にできそうなアーキテクチャをピックアップ
 
-それぞれのサービスの利用方法を習得してしまえば、あとは組み合わせる。
+それぞれのサービスの利用方法を習得してしまえば、あとは組み合わせて要件を満たすアーキテクチャが実現できる。
 
 # サーバレスWEBアプリケーション
 
@@ -12,12 +12,13 @@ https://docs.microsoft.com/ja-jp/azure/architecture/reference-architectures/serv
 ![image](./001.PNG)
 
 ## 構成
-・Azure CDNを使ったコンテンツの配信
-・Blobストレージに静的コンテンツをホスティング
-・API Managementを利用したAPI管理
-・Functions
-・ストレージにはCosmosDB
-・認証・認可にはAAD
+・Azure CDNを使ったコンテンツの配信  
+・Blobストレージに静的コンテンツをホスティング  
+・API Managementを利用したAPI管理  
+・Functions  
+・ストレージにはCosmosDB  
+・認証・認可にはAAD  
+
 
 ## まとめ
 WEBアプリの基本的な構成。ほとんどのWEBアプリはこれで対応できる構成。
@@ -30,7 +31,7 @@ https://docs.microsoft.com/ja-jp/azure/architecture/solution-ideas/articles/serv
 ![image](./002.PNG)
 
 ## 構成
-EventHub(Queue)とFunctionsを組み合わせたイベント処理。F社プロジェクトで利用した構成。サーバレスないベンド処理の基本的な構成。
+EventHub(Queue)とFunctionsを組み合わせたイベント処理。過去のプロジェクトで実際に利用したことのある構成。サーバレスなベンド処理の基本的な構成。
 
 ## まとめ
 Functionsのバインディングを利用することで簡単に実装できる。
