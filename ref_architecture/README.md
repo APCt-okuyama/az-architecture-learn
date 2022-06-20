@@ -88,3 +88,5 @@ https://docs.microsoft.com/ja-jp/azure/architecture/solution-ideas/articles/weba
 ## まとめ
 「インターネット規模のユーザーへの対応」ということでEvent Hubs, AKSを利用してスケーラビリティを確保している。
 HSBC のデジタル決済プラットフォームである PayMe for Business から着想を得ている。
+
+※動画みるとプレビュー機能も利用している
