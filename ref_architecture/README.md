@@ -1,9 +1,15 @@
 # Azure アーキテクチャを参照する
 
 https://docs.microsoft.com/ja-jp/azure/architecture/browse/
-の中から参考にできそうなアーキテクチャをピックアップ
 
-それぞれのサービスの利用方法を習得してしまえば、あとは組み合わせて要件を満たすアーキテクチャが実現できる。
+## リファレンス アーキテクチャとは
+アーキテクチャを設計する上で参考にできる資料。設計時に参考にできる資料という位置づけでありこれを厳守しなければならないわけではない。(※あくまでも参考）
+
+※`参照アーキテクチャ`という言葉は以前からあった。
+
+Azureでは、「Azure 上での一般的なワークロードに関するソリューションのアイデアを紹介します。」と説明されています。具体的なアーキテクチャとユースケースが示されており設計時に参考にすることで、Azureでのベストプラクティスなどを取り込むことができる。
+
+参考にできそうなアーキテクチャをいくつか紹介します。
 
 # サーバレスWEBアプリケーション
 
@@ -48,6 +54,7 @@ Functions(Durable Functions)とACI(Azure Container Instance)を利用したバ�
 
 ## まとめ
 Durable Functionsの具体的な例。時間のかかるバッチ処理に対応する場合の参考にできる。
+コンピューターのリソースがたくさん必要な処理や時間のかかる処理をコンテナで(Azure Container Instance)実行する。
 
 # スケーラブルな eコマース Web アプリの構築
 https://docs.microsoft.com/ja-jp/azure/architecture/solution-ideas/articles/scalable-ecommerce-web-app
@@ -65,7 +72,19 @@ https://docs.microsoft.com/ja-jp/azure/architecture/solution-ideas/articles/inst
 ## 構成
 
 ## まとめ
-一対多のリアルタイム通信と更新を簡素化する。
-IoTのデータ処理などに利用可能。　
-AppServiceとFunctionsが図に示されているが説明が分かりにくい。。。
+一対多のリアルタイム通信と更新を簡素化する例として挙げられている。
+IoTのデータ処理などに利用可能となっているが、図に示されているAppServiceとFunctionsの役割がよくわからない。
 SignalRを使ったリアルタイム双方向通信の例として参考にできる。SignalR以外にもAzure PubSub(Websocket)やIoT(Mqtt)を使うことも可能。
+
+# MySQL(RDB)とRedisを利用したWEB (AKS)
+Web アプリケーションとモバイル アプリケーションを構築する
+
+https://docs.microsoft.com/ja-jp/azure/architecture/solution-ideas/articles/webapps
+
+![image](./006.PNG)
+
+インターネット規模のユーザーへの対応
+
+## まとめ
+「インターネット規模のユーザーへの対応」ということでEvent Hubs, AKSを利用してスケーラビリティを確保している。
+HSBC のデジタル決済プラットフォームである PayMe for Business から着想を得ている。
