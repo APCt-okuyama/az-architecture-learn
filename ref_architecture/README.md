@@ -52,5 +52,20 @@ Durable Functionsの具体的な例。時間のかかるバッチ処理に対応
 # スケーラブルな eコマース Web アプリの構築
 https://docs.microsoft.com/ja-jp/azure/architecture/solution-ideas/articles/scalable-ecommerce-web-app
 
+![image](./004.PNG)
+
+## 構成
+## まとめ
+
 # サーバーレス コードを使用したインスタント ブロードキャスト
 https://docs.microsoft.com/ja-jp/azure/architecture/solution-ideas/articles/instant-broadcasting-on-serverless-architecture
+
+![image](./005.PNG)
+
+## 構成
+
+## まとめ
+一対多のリアルタイム通信と更新を簡素化する。
+IoTのデータ処理などに利用可能。　
+AppServiceとFunctionsが図に示されているが説明が分かりにくい。。。
+SignalRを使ったリアルタイム双方向通信の例として参考にできる。SignalR以外にもAzure PubSub(Websocket)やIoT(Mqtt)を使うことも可能。
