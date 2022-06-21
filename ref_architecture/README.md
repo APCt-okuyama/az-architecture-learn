@@ -69,8 +69,6 @@ https://docs.microsoft.com/ja-jp/azure/architecture/solution-ideas/articles/inst
 
 ![image](./005.PNG)
 
-## 構成
-
 ## まとめ
 一対多のリアルタイム通信と更新を簡素化する例として挙げられている。
 IoTのデータ処理などに利用可能となっているが、図に示されているAppServiceとFunctionsの役割がよくわからない。
@@ -90,3 +88,17 @@ https://docs.microsoft.com/ja-jp/azure/architecture/solution-ideas/articles/weba
 HSBC のデジタル決済プラットフォームである PayMe for Business から着想を得ている。
 
 ※動画みるとプレビュー機能も利用している
+
+# Azure での基本的なエンタープライズ統合
+
+https://docs.microsoft.com/ja-jp/azure/architecture/reference-architectures/enterprise-integration/basic-enterprise-integration
+
+![image](./007.PNG)
+
+AzureのiPaaSであるLogic Appを利用したシステム間連携の例
+
+## まとめ
+Azure AD + API Management の組み合わせでAPIの認証・認可を行うこの構成はAzureではよく利用される構成。
+ワークフローの実現にLogic Appを利用して「ノーコード、ローコード」でシステム間の連携を実現できる。
+プログラミングに抵抗がなければワークフローの実現にはFunctions(Durable Functions)の利用も検討できる。
+Logic Appはすでに用意されている多数のコネクタが魅力。プログラミングなしなので品質は安定する。
